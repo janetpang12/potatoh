@@ -1,9 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    json (2.0.2)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rest-open-uri (1.0.0)
+    rubygems-update (2.6.7)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -14,6 +17,10 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bundler
+  json
+  rest-open-uri
+  rubygems-update
   sinatra
 
 BUNDLED WITH
