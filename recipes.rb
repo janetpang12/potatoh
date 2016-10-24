@@ -8,11 +8,10 @@ get '/' do
   "Hello World!"
 end
 
-api_key = edamam_api["api_key"]
-api_id =  edamam_api["api_id"]
+api_key = ENV["EDAMAM_API_KEY"]
+api_id =  ENV["EDAMAM_API_ID"]
 
-edamam_url = "https://api.edamam.com/search?q=chicken&app_id=#{api_id}&app_key=#{api_key}"
+edamam_url = "http://api.edamam.com/search?q=potato&app_id=#{api_id}&app_key=#{api_key}"
 
 response = HTTParty.get(edamam_url)
-byebug
 puts recipe_data = JSON.parse(response.body) if response.code ==200
